@@ -22,7 +22,12 @@ export default function SignInForm() {
     setError(null);
     setLoading(true);
     try {
-      await signIn("email", { email, password, redirectTo: "/" });
+      await signIn("password", {
+        flow: mode === "signup" ? "signUp" : "signIn",
+        email,
+        password,
+        redirectTo: "/",
+      });
       router.push("/");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Sign-in failed");
