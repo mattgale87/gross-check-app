@@ -21,7 +21,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https:",
       "font-src 'self'",
-      "connect-src 'self' https://*.convex.cloud https://openrouter.ai https://api.api-ninjas.com",
+      "connect-src 'self' https://*.convex.cloud wss://*.convex.cloud https://*.convex.site wss://*.convex.site https://openrouter.ai https://api.api-ninjas.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
