@@ -12,6 +12,7 @@ import type * as ResendOTP from "../ResendOTP.js";
 import type * as auth from "../auth.js";
 import type * as help from "../help.js";
 import type * as http from "../http.js";
+import type * as leads from "../leads.js";
 import type * as tax from "../tax.js";
 
 import type {
@@ -25,6 +26,7 @@ declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   help: typeof help;
   http: typeof http;
+  leads: typeof leads;
   tax: typeof tax;
 }>;
 

@@ -5,6 +5,13 @@ import { authTables } from "@convex-dev/auth/server";
 export default defineSchema({
   ...authTables,
 
+  // Email-capture waitlist (public — no auth needed). For retaining promo traffic.
+  leads: defineTable({
+    email: v.string(),
+    source: v.string(), // e.g. "promo", "landing"
+    createdAt: v.number(),
+  }).index("by_email", ["email"]),
+
   // A user's saved pay rules (job, base rate, OT threshold/multiplier, premiums)
   rules: defineTable({
     userId: v.string(),
